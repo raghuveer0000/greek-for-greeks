@@ -1,21 +1,23 @@
-/* Node of a linked list
- class Node {
-   int data;
+/*
+class Node {
+    int data;
     Node next;
-    Node(int d)  { data = d;  next = null; }
-}
-*/
+
+    Node(int x) {
+        data = x;
+        next = null;
+    }
+} */
 
 class Solution {
     int getMiddle(Node head) {
-        // Your code here.
-        if(head==null) return -1;
-        Node fast=head;
-        Node slow=head;
-        while(fast!=null && fast.next!=null){
-            slow=slow.next;
-            fast=fast.next.next;
+        // code here
+        Node i=head;
+        Node j=head;
+        while(j!=null && j.next!=null){
+            i=i.next;
+            j=j.next.next;
         }
-        return slow.data;
+        return i.data;
     }
 }
