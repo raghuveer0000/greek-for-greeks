@@ -3,13 +3,11 @@
 class Solution {
     public void rotate(int[] arr) {
         // code here
-        int l=arr.length;
-        if(l<=1)return;
-         
-         int first=arr[l-1];
-         for(int i=l-1;i>0;i--){
-             arr[i]=arr[i-1];
-         }
-         arr[0]=first;
+        int len=arr.length;
+        int last=arr[len-1];
+        for(int i=len-1;i>0;i--){
+            arr[i]=arr[i-1];
+        }
+        arr[0]=last;
     }
 }
